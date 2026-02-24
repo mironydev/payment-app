@@ -126,7 +126,7 @@
     </div>
   </section>
 
-  <section id="transfer-money" class="w-11/12 mx-auto">
+  <section id="transfer-money" class="w-11/12 mx-auto hidden">
     <h2 class="text-xl font-bold pb-4">Transfer Money</h2>
     <div class="card bg-base-100 w-full shadow rounded-2xl">
       <div class="card-body">
@@ -145,8 +145,23 @@
       </div>
     </div>
   </section>
+
+  <section id="get-bonus" class="w-11/12 mx-auto">
+    <h2 class="text-xl font-bold pb-4">Get Bonus</h2>
+    <div class="card bg-base-100 w-full shadow rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-neutral font-bold">Enter Bonus Coupon</label>
+          <input id="coupon" type="text"
+            class="input rounded-full bg-base-300 border-0 w-full mb-3" placeholder="Enter your coupon" />
+          <button id="coupon-btn" class="btn btn-primary rounded-full ">Get Bonus</button>
+        </fieldset>
+      </div>
+    </div>
+  </section>
   
   <script src="script/machine.js"></script>
+  <script src="script/getbonus.js"></script>
   <script src="script/transfermoney.js"></script>
   <script src="script/addmoney.js"></script>
   <script src="script/cashout.js"></script>
