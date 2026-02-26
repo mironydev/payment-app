@@ -5,7 +5,7 @@ document.getElementById('coupon-btn')
     if (coupon === 'bonus') {
       const currentBalance = getBalance();
       const newBalance = currentBalance + 10;
-      alert('bonus availed! (+10$)')
+      alert('bonus availed +10$')
       setBalance(newBalance);
       addTransaction('Bonus', ammount, false);
       return;

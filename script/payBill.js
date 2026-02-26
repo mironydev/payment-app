@@ -13,8 +13,8 @@ document.getElementById('pay-bill-btn')
     if (ammount > currentBalance) {
       alert('insufficient balance');
       return;
-    } else if (!ammount || ammount < 0) {
-      alert('invalid ammount');
+    } else if (ammount < 50) {
+      alert('failed. minimum 50$');
       return;
     }
 

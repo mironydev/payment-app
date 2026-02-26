@@ -28,7 +28,6 @@ function showOnly(id) {
   payBill.classList.add('hidden');
   transaction.classList.add('hidden');
 
-
   const selected = document.getElementById(id);
   selected.classList.remove('hidden');
 }
@@ -38,8 +37,13 @@ function date() {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  return `${days[now.getDay()]} ${months[now.getMonth()]} ${now.getDate()} ${now.getFullYear()} ` +
-    `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+  const hours = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const period = hours >= 12 ? 'PM' : 'AM';
+  const hours12 = (hours % 12 || 12).toString().padStart(2, '0');
+
+  return `${days[now.getDay()]} ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}, ` +
+    `${hours12}:${minutes} ${period}`;
 }
 
 function addTransaction(type, ammount, isDebit) {

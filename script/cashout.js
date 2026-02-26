@@ -12,6 +12,11 @@ document.getElementById('cashout-btn')
   const currentBalance = getBalance();
   const newBalance = currentBalance - Number(ammount);
 
+  if (ammount < 50) {
+    alert('invalid ammount');
+    return;
+  }
+
   if (newBalance < 0) {
     alert('insufficient balance');
     return;

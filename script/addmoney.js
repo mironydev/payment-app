@@ -16,6 +16,10 @@ document.getElementById('add-money-btn')
     const ammount = getValue('add-money-amount');
     const currentBalance = getBalance();
     const newBalance = currentBalance + Number(ammount);
+    if (ammount < 50) {
+      alert('failed. minimum 50$');
+      return;
+    }
 
     const addMoneyPin = getValue('add-money-pin');
 
