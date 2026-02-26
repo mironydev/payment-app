@@ -20,8 +20,11 @@ document.getElementById('add-money-btn')
     const addMoneyPin = getValue('add-money-pin');
 
     if (addMoneyPin === '0000') {
-      alert(`add money successful from ${bankName} at ${new Date()}`);
+      alert(`add money successful`);
       setBalance(newBalance);
+
+      addTransaction('Add Money', ammount, false);
+
     } else {
       alert('wrong pin');
       return;

@@ -24,6 +24,7 @@ document.getElementById('transfer-btn')
     if (pin === '0000') {
       alert('transfer successful.');
       setBalance(newBalance);
+      addTransaction('Transfer Money', ammount, true);
     } else {
       alert('wrong pin');
       return;

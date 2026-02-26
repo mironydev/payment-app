@@ -22,6 +22,7 @@ document.getElementById('pay-bill-btn')
     if (pin === '0000') {
       alert('bill pay successful.');
       setBalance(newBalance);
+      addTransaction('Pay Bill', ammount, true);
     } else {
       alert('wrong pin');
       return;
